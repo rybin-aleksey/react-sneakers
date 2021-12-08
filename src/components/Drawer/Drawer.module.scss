@@ -1,0 +1,135 @@
+.overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1;
+}
+
+.drawerBlock {
+	position: absolute;
+	width: 450px;
+	height: 100%;
+	right: 0;
+	background: #fff;
+	box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+	padding: 40px;
+	padding-top: 50px;
+	padding-left: 50px;
+	display: flex;
+	flex-direction: column;
+
+	.headline {
+		h2 {
+			font-weight: 600;
+			margin: 0;
+			font-size: 28px;
+			display: flex;
+			justify-content: space-between;
+
+			img {
+				cursor: pointer;
+			}
+		}
+	}
+
+	.items {
+		overflow: auto;
+		margin-bottom: 30px;
+	}
+
+	.cartItem {
+		border: 1px solid #eaeaea;
+		border-radius: 12px;
+		overflow: hidden;
+		padding: 20px;
+		display: flex;
+		align-items: center;
+		margin-bottom: 15px;
+
+		.cartItemImg {
+			height: 70px;
+			width: 70px;
+			background-size: contain;
+			background-position: 0 -3px;
+			background-repeat: no-repeat;
+			margin-right: 20px;
+		}
+
+		p {
+			margin: 0;
+		}
+	
+		.priceDrawerText {
+			font-weight: 600;
+		}
+
+		.removeBtn {
+			opacity: 0.5;
+			cursor: pointer;
+			transition: opacity 0.2s ease-in-out;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	.cartTotalBlock {
+		margin-top: auto;
+
+		li {
+			margin-bottom: 12px;
+		}
+
+		div{
+			flex: 1;
+			height: 1;
+			border-bottom: 1px dashed #eaeaea;
+			position: relative;
+			top: -2px;
+			margin: 0 7px;
+		}
+ 
+		p {
+			margin: 0;
+			font-weight: 600;
+		}
+
+		.greenButton {
+			position: relative;
+
+			&:hover {
+				img {
+					transform: translateX(8px)
+				}
+			}
+
+			img {
+				position: absolute;
+				right: 84px;
+				top: 21px;
+				transition: transform 0.2s ease-in-out;
+			}
+		}
+	}
+	
+	.greenButton {
+		width: 100%;
+		background-color: #9dd558;
+		border-radius: 8px;
+		height: 55px;
+		border: none;
+		color: #fff;
+		font-size: 16px;
+		font-weight: 600;
+		transition: background 0.15s ease-in-out;
+
+		&:hover {
+			background-color: darken(#9dd558, 5%);
+			cursor: pointer;
+		}
+	}
+}

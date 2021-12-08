@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './Header.module.scss'
 
 function Header() {
 	return(
@@ -13,7 +14,7 @@ function Header() {
 		<ul className="d-flex">
 			<li className="mr-30">
 				<img width={20} height={20} src="/img/cart.svg" alt="some-text" />
-				<span className="price-text">1205 руб.</span>
+				<span className={styles.priceText}>1205 руб.</span>
 			</li>
 			<li>
 				<img width={20} height={20} src="/img/user.svg" alt="some-text" />
